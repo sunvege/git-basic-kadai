@@ -1,0 +1,51 @@
+PS C:\Users\sungr> cd C:\Users\sungr\git_challenge
+PS C:\Users\sungr\git_challenge> git init
+Initialized empty Git repository in C:/Users/sungr/git_challenge/.git/
+PS C:\Users\sungr\git_challenge> git add .
+PS C:\Users\sungr\git_challenge> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello_world.txt
+
+PS C:\Users\sungr\git_challenge> git commmit -m "1回目のコミット"
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS C:\Users\sungr\git_challenge> git commit -m "1回目のコミット"
+[main (root-commit) e196ab4] 1回目のコミット
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+PS C:\Users\sungr\git_challenge> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\sungr\git_challenge> echo "こんにちは、世界！" >> hello_world.txt
+PS C:\Users\sungr\git_challenge> echo "こんにちは、世界！" >> hello_world.txt
+PS C:\Users\sungr\git_challenge> git add .
+PS C:\Users\sungr\git_challenge> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello_world.txt
+
+PS C:\Users\sungr\git_challenge> git diff hello_world.txt
+PS C:\Users\sungr\git_challenge> git diff --staged 
+diff --git a/hello_world.txt b/hello_world.txt
+index 7b9549c..4916f89 100644
+Binary files a/hello_world.txt and b/hello_world.txt differ
+PS C:\Users\sungr\git_challenge> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello_world.txt
+
+PS C:\Users\sungr\git_challenge> git commit -m "2回目のコミット"
+[main 30d0c7e] 2回目のコミット
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\sungr\git_challenge> git log --oneline
+30d0c7e (HEAD -> main) 2回目のコミット
+e196ab4 1回目のコミット
